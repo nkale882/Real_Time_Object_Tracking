@@ -4,7 +4,7 @@ from deep_sort_realtime.deepsort_tracker import DeepSort
 
 class VideoCamera:
     def __init__(self):
-        self.cap = cv2.VideoCapture("C:/Users/nilesh/Downloads/27260-362770008_small.mp4")
+        self.cap = cv2.VideoCapture("Video Path")
         self.yolo = YOLO("yolov8n.pt")
         self.tracker = DeepSort(max_age=10, n_init=2, max_cosine_distance=0.3)
         self.selected_box = None
