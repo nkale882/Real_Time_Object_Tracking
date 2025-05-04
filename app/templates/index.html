@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-Time Tracker</title>
+  <style>
+    #canvas { position: absolute; top: 0; left: 0; }
+    #video-wrapper { position: relative; display: inline-block; }
+  </style>
+</head>
+<body>
+  <h2>Draw box to track object</h2>
+  <div id="video-wrapper" style="position: relative;">
+    <img id="video" src="{{ url_for('main.video_feed') }}" width="640" height="480" style="position: absolute; top: 0; left: 0; z-index: 1;">
+    <canvas id="canvas" width="640" height="480" style="position: absolute; top: 0; left: 0; z-index: 2;"></canvas>
+  </div>  
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
